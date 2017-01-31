@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Address Book</title>
+</head>
+<body ng-controller='PeopleController'>
+	<h1>Address Book</h1>
+	<div>
+		<div ng-repeat='person in people'>
+			<div>{{person.name}} - {{person.phone}}</div>
+		</div>
+	</div>
+	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js'></script>
+	<script type="text/javascript" src='scripts.js'></script>
+</body>
+</html>
