@@ -2,12 +2,13 @@
 <html ng-app>
 <head>
 	<title>Address Book</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body ng-controller='PeopleController'>
 	<h1>Address Book</h1>
-	<div>
+	<div class="wrapper">
 
-		<div ng-repeat='person in people'>
+		<div class="contact-item" ng-repeat='person in people'>
 			<div>{{person.name}} - {{person.phone}}</div>
 			<span>{{person.city}}</span>
 		</div>
