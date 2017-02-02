@@ -2,17 +2,29 @@
 <html ng-app>
 <head>
 	<title>Address Book</title>
-	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body ng-controller='PeopleController'>
 	<h1>Address Book</h1>
 	<div class="wrapper">
-
-		<div class="contact-item" ng-repeat='person in people'>
+		<div class="contact-item" ng-repeat="person in people | orderBy: 'name'">
 			<div>{{person.name}} - {{person.phone}}</div>
 			<span>{{person.city}}</span>
 		</div>
+	</div>
+	<div class='wrapper'>
+		<h2>Add a Contact</h2>
+		<span>Name:</span>
+		<input type='text' name="nome" ng-model='newPerson.name'>
+		<br>
+		<span>Phone:</span>
+		<input type="text" name="phone" ng-model='newPerson.phone'>
+		<br>
+		<span>City:</span>
+		<input type="text" name="city" ng-model='newPerson.city'>
+		<br>
+		<button ng-click="Save()">Save</button>
 	</div>
 	<!--Versão 1.5, não permite o controller dessa forma-->
 	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.11/angular.js'></script>
