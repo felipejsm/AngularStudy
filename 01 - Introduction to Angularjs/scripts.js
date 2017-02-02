@@ -6,5 +6,9 @@ function PeopleController($scope) {
     	$scope.people.push(
 			{name: $scope.newPerson.name, phone: $scope.newPerson.phone, city: $scope.newPerson.city}
     		);
-    }					 
+    	$scope.formVisibility = false;
+    };	
+    $scope.ShowForm = function() {
+    		$scope.formVisibility = true;
+    };
 }

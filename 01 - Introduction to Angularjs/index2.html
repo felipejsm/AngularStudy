@@ -13,7 +13,10 @@
 			<span>{{person.city}}</span>
 		</div>
 	</div>
-	<div class='wrapper'>
+	<center>
+		<button ng-click='ShowForm()' ng-hide='formVisibility'>Add Contact</button>
+	</center>
+	<div class='wrapper' ng-show='formVisibility'>
 		<h2>Add a Contact</h2>
 		<span>Name:</span>
 		<input type='text' name="nome" ng-model='newPerson.name'>
